@@ -1,0 +1,73 @@
+
+
+.education-timeline {
+  position: relative;
+}
+
+.education-item {
+  margin-bottom: 4rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--accent-color);
+}
+
+.education-content {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.institution-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+}
+
+.education-content h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.education-content h4,
+.education-content .year {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.education-content .description {
+  color: var(--text-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .education-item {
+    padding-left: 20px;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .institution-logo {
+    margin-bottom: 15px;
+  }
+}

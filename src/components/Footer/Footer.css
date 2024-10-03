@@ -1,0 +1,112 @@
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 3rem 0 1.5rem;
+  position: relative;
+}
+
+  footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+  }
+  
+.footer-content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50%;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.social-links a,
+.footer-section nav a {
+  color: var(--text-secondary);
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.social-links a:hover,
+.footer-section nav a:hover {
+  color: var(--accent-color);
+}
+
+.social-links a::after,
+.footer-section nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover::after,
+.footer-section nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--bg-primary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-section h3::after {
+    left: 25%;
+    width: 50%;
+  }
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

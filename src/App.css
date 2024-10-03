@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-color: #64ffda;
+  --accent-color-dark: #00b39e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.App {
+  text-align: left;
+}
+
+.section-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    width: 95%;
+    padding: 60px 0;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h1, h3, h4, h5, h6 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color-dark);
+}
+
+/* Subtle background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, #121212, #1a1a1a, #121212, #1e1e1e);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+section {
+  
+  background-color: var(--bg-primary);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styles */
+header {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+/* Work Experience styles */
+.experience-item {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+  color: #4ecdc4;
+  margin-top: 0;
+}
+
+.experience-item .company {
+  font-weight: 600;
+  color: #ff6b6b;
+}
+
+.experience-item .date {
+  font-style: italic;
+  color: #a0a0a0;
+}
+
+.experience-item ul {
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 10px;
+}
+
+/* ... (rest of the CSS remains the same) ... */
